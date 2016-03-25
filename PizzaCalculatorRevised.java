@@ -41,7 +41,7 @@ public class PizzaCalculatorRevised {
 			System.out.printf("You need to order %d pizzas\n",needPizza/4);
 		}
 		else{
-			int morePizza=needPizza/4+(needPizza%4+(4-needPizza%4))/4;
+			int morePizza=needPizza/perpizza+(needPizza%perpizza+(perpizza-needPizza%perpizza))/perpizza;
 			System.out.printf("You need to order %d pizzas\n",morePizza);
 		}
 	}
