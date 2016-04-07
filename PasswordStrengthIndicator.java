@@ -4,6 +4,9 @@ public class PasswordStrengthIndicator {
 		Scanner read = new Scanner(System.in);
 		System.out.println("Please enter the password you are trying to test");
 		String password = read.nextLine();
+		passwordValidator(password);
+	}
+	public static void passwordValidator(String password){
 		String regex = "a-z~@#$%^&*:;<>.,/}{+";
 		if (password.matches("[0-9]+") && password.length() <= 8){
 			System.out.println("Your password is very weak");
@@ -19,6 +22,5 @@ public class PasswordStrengthIndicator {
 		else if(password.matches("["+regex+"a-zA-Z0-9]+")&&password.length()>=8){
 			System.out.println("Your password is very strong");
 		}
-		
 	}
 }
